@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.AbstractButton;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -68,8 +69,9 @@ public class FrameSfg extends JFrame {
 					gender="Female";
 					
 		       
-		    	   
-		
+		    	 if((t1.getText().equals("")==true) || (t2.getText().equals("")==true) || (t3.getText().equals("")==true) ||(t4.getText().equals("")==true) )
+		    		 JOptionPane.showMessageDialog(null, "Please fill all the details");
+		    	 else
 				textArea1.setText("First name :\t "+t1.getText()+"\nLast Name :\t"+t2.getText()+"\nDOB: \t"+t3.getText()+"\nGender :\t"+gender+"\nEmail :\t"+t4.getText());
 				
 				
